@@ -4,6 +4,7 @@ import styles from "./FlightSearchForm.module.css";
 const FlightSearchForm : React.FC = () =>{
     return(
         <form className={styles.form}>
+
             <div className={styles.field}>
                 <label htmlFor="form">出発地</label>
                 <select name="form" id="from">
@@ -30,6 +31,20 @@ const FlightSearchForm : React.FC = () =>{
                 </select>
             </div>
 
+            <div className={styles.field}>
+                <label htmlFor="departureDay">出発日</label>
+                <input type="date" id="departureDay" name="departureDay"  className={styles.dataInput} />
+            </div>
+
+            <div className={styles.field}>
+                <label htmlFor="returnDay">到着日</label>
+                <input type="date" id="returnDay" name="returnDay" className={styles.dataInput} />
+            </div>
+
+            <button type="submit" className={styles.button}>検索</button>
+
         </form>
-    )
-}
+    );
+};
+
+export default FlightSearchForm;
