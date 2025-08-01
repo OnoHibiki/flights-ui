@@ -7,7 +7,7 @@ const FlightSearchForm : React.FC = () =>{
 
             <div className={styles.field}>
                 <label htmlFor="form">出発地</label>
-                <select name="form" id="from">
+                <select name="form" id="from" className={styles.select}>
                     <option value="">選択してください</option>
                     <option value="tokyo">東京</option>
                     <option value="osaka">大阪</option>
@@ -20,7 +20,7 @@ const FlightSearchForm : React.FC = () =>{
 
             <div className={styles.field}>
                 <label htmlFor="to">到着地</label>
-                <select name="to" id="to">
+                <select name="to" id="to" className={styles.select}>
                     <option value="">選択してください</option>
                     <option value="tokyo">東京</option>
                     <option value="osaka">大阪</option>

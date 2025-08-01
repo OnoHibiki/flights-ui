@@ -1,48 +1,53 @@
 .form {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
     gap: 1rem;
-    padding: 1.5rem;
-    background-color: #f5f5f5;
+    padding: 1rem;
+    background-color: rgb(219, 219, 239);
+    border: 3px solid #ddd;
     border-radius: 8px;
+    max-width: 900px;
     justify-content: space-between;
 }
 
 .field {
     display: flex;
     flex-direction: column;
-    width: 48%;
-    min-width: 200px;
+    border: 3px solid green;
 }
 
 .field label {
     margin-bottom:0.5rem;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 0.95rem;
+    color: #333;
+    text-align: right;
+    
 }
 
 .select {
     padding: 0.5rem;
-    border: 1px solid #ccc;
 }
 
 .dateInput {
     padding: 0.5rem;
-    border: 1px solid #ccc;
+    border: 10px solid red;
     border-radius: 4px;
-    font-size: 1rem;
+    font-size: 10rem;
 }
 
 .button {
-    margin-top: 1rem;
+    grid-column: span 2;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
+    justify-content: right;
     background-color: #0070f3;
     color: white;
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
 .button:hover {
