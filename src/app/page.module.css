@@ -1,0 +1,19 @@
+/* 全体の配置 */
+.container{
+    display: flex;
+    justify-content: center;
+    align-items :  flex-start ;
+    min-Height : 100vh;
+    padding-Top: 2rem;
+    background-color: antiquewhite;
+}
+
+.innerBox{
+  width: 100%;
+  max-width: 1000px;
+  padding: 1rem;
+  /* box-sizing: border-box; */
+  background-color: rgb(173, 173, 231);
+  border-radius: 18px;
+
+}

@@ -14,7 +14,5 @@ export default function Home() {
         <FlightSearchForm />
       </div>
     </main>
-
-      
   );
 }
