@@ -3,7 +3,10 @@ import styles from "./FlightSearchForm.module.css";
 
 const FlightSearchForm : React.FC = () =>{
     return(
-        <form className={styles.form}>
+
+        
+        <form className={styles.container}>
+
 
             <div className={styles.field}>
                 <label htmlFor="form">出発地</label>
