@@ -33,12 +33,12 @@ const FlightSearchForm : React.FC = () =>{
 
             <div className={styles.field}>
                 <label htmlFor="departureDay">出発日</label>
-                <input type="date" id="departureDay" name="departureDay"  className={styles.dataInput} />
+                <input type="date" id="departureDay" name="departureDay"  className={styles.dateInput} />
             </div>
 
             <div className={styles.field}>
                 <label htmlFor="returnDay">到着日</label>
-                <input type="date" id="returnDay" name="returnDay" className={styles.dataInput} />
+                <input type="date" id="returnDay" name="returnDay" className={styles.dateInput} />
             </div>
 
             <button type="submit" className={styles.button}>検索</button>
