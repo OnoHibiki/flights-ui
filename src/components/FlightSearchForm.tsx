@@ -6,9 +6,8 @@ import styles from "./FlightSearchForm.module.css";
 type Flight = {
     from:string;
     to:string;
-    departureDay: string;
-    returnDay:string;
-    price:number;
+    day:string;
+    basePrice:number;
 };
 
 import flightsData from "@/data/flights.json"; //フライトデータの置き場所
@@ -31,15 +30,23 @@ const FlightSearchForm : React.FC = () => {
     const handleSubmit = (e: React.FormEvent) =>{
         e.preventDefault();
 
-        const matched = flights.filter(
+        //往路
+        const departureFlight = flights.filter(
             (flight) =>
             flight.from === from &&
             flight.to === to &&
-            flight.departureDay === departureDay &&
-            flight.returnDay === returnDay
+            flight.day === departureDay 
         );
 
-        setResults(matched);
+        //復路
+        const returnFlight = flights.filter(
+            (flight) =>
+            flight.from === to &&
+            flight.to === from &&
+            flight.day === returnDay
+        );
+
+        setResults([...departureFlight, ...returnFlight]);
     };
 
 
@@ -86,7 +93,10 @@ const FlightSearchForm : React.FC = () => {
 
             <ul>
                 {results.map((f,i) =>(
-                    <li key={i}>{f.from} → {f.to}({f.departureDay}発) ¥{f.price}</li>
+                    <li key={i}>
+                        {f.from} → {f.to}({f.day}発) ¥{f.basePrice}
+                        {f.day === departureDay ? "【往路】" : "【復路】"}
+                    </li>
                 ))}
             </ul>
 
