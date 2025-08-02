@@ -1,0 +1,9 @@
+[
+    {
+        "from":"tokyo",
+        "to":"osaka",
+        "departureDay": "2025-08-03",
+        "returnDay": "2025-08-07",
+        "price":12000
+    }
+]
