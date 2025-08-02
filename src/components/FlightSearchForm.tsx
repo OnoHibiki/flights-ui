@@ -14,6 +14,34 @@ import flightsData from "@/data/flights.json"; //フライトデータの置き�
 const flights: Flight[ ] = flightsData;
 
 
+//dayから曜日を取得する関数
+const getDayOfWeek = (dateStr: string): string => {
+    const date = new Date(dateStr);
+    return date.toLocaleDateString('en-US',{ weekday: 'short' });
+}
+
+
+//曜日ごとの価格倍率設定関数
+const priceMultiplierDayOfWeek: { [key : string]: number } = {
+    Sun: 0.7,//日曜日
+    Sat: 1.5,
+    Fri: 2.0,
+    Thu: 1.2,
+};
+
+//値段に曜日倍率を掛ける関数
+const applyPriceMultiplier = (flights: Flight[]) => {
+    return flights.map(flight =>{
+        const weekday = getDayOfWeek(flight.day);
+        const multiplier = priceMultiplierDayOfWeek[weekday] || 1;
+        return{
+            ...flight,
+            basePrice: Math.round(flight.basePrice * multiplier)
+
+        };
+    });
+};
+
 
 const FlightSearchForm : React.FC = () => {
 
@@ -45,8 +73,11 @@ const FlightSearchForm : React.FC = () => {
             flight.to === from &&
             flight.day === returnDay
         );
+        
 
-        setResults([...departureFlight, ...returnFlight]);
+        //曜日倍率を乗算した最終価格を表示
+        const finalPrice = applyPriceMultiplier([...departureFlight, ...returnFlight]);
+        setResults(finalPrice);
     };
 
 
