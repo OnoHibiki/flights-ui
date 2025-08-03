@@ -75,9 +75,9 @@ const FlightSearchForm : React.FC = () => {
         );
         
 
-        //曜日倍率を乗算した最終価格を表示
-        const finalPrice = applyPriceMultiplier([...departureFlight, ...returnFlight]);
-        setResults(finalPrice);
+        //曜日倍率を乗算した最終価格を表示(往路と復路のそれぞれの値段が配列に)
+        const finalPrices = applyPriceMultiplier([...departureFlight, ...returnFlight]);
+        setResults(finalPrices);
     };
 
 

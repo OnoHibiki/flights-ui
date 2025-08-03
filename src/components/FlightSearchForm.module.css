@@ -4,8 +4,8 @@
     gap: 1rem;
     padding: 1rem;
     background-color: rgb(219, 219, 239);
-    border: 3px solid #ffffff;
-    border-radius: 8px;
+    border: 1px solid #ffffff;
+    /* border-radius: 8px; */
     /* max-width: 900px; */
     justify-content: space-between;
 }

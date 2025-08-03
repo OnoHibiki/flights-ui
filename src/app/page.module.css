@@ -4,18 +4,19 @@
     justify-content: center;
     align-items :  flex-start ;
     min-Height : 100vh;
-    padding-Top: 2rem;
+    padding-Top: 0.5rem;
     background-color: antiquewhite;
 }
 
 .titleContainer{
-  background-color: #007aff;
+  background-color: #007aff; 
   color: white;
-  border-radius: 12px;
+  /* border-radius: 12px; */
   padding: 1rem 2rem;
   text-align: center;
   width: 100%;
   margin: 0;
+  border: white 1px solid;
 }
 
 .titles{
@@ -28,9 +29,9 @@
 .innerBox{
   width: 100%;
   max-width: 1000px;
-  padding: 1rem;
+  padding: 0.5rem;
   /* box-sizing: border-box; */
   background-color: rgb(173, 173, 231);
-  border-radius: 18px;
+  border-radius: 8px;
 
 }
