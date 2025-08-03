@@ -1,80 +1,80 @@
 [
-  { "airline": "ANA", "flightNumber": "ANA101", "from": "東京", "to": "大阪", "departureTime": "08:00", "arrivalTime": "09:25", "basePrice": 18000 },
-  { "airline": "ANA", "flightNumber": "ANA102", "from": "東京", "to": "大阪", "departureTime": "13:30", "arrivalTime": "14:55", "basePrice": 18000 },
-  { "airline": "ANA", "flightNumber": "ANA103", "from": "東京", "to": "大阪", "departureTime": "19:00", "arrivalTime": "20:25", "basePrice": 18000 },
-  { "airline": "ANA", "flightNumber": "ANA104", "from": "大阪", "to": "東京", "departureTime": "08:10", "arrivalTime": "09:35", "basePrice": 18000 },
-  { "airline": "ANA", "flightNumber": "ANA105", "from": "大阪", "to": "東京", "departureTime": "14:00", "arrivalTime": "15:25", "basePrice": 18000 },
-  { "airline": "ANA", "flightNumber": "ANA106", "from": "大阪", "to": "東京", "departureTime": "19:30", "arrivalTime": "20:55", "basePrice": 18000 },
+  { "airline": "ANA", "flightNumber": "ANA101", "from": "東京", "to": "大阪", "departureTime": "08:00", "arrivalTime": "09:25", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 25 },
+  { "airline": "ANA", "flightNumber": "ANA102", "from": "東京", "to": "大阪", "departureTime": "13:30", "arrivalTime": "14:55", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 25 },
+  { "airline": "ANA", "flightNumber": "ANA103", "from": "東京", "to": "大阪", "departureTime": "19:00", "arrivalTime": "20:25", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 25 },
+  { "airline": "ANA", "flightNumber": "ANA104", "from": "大阪", "to": "東京", "departureTime": "08:10", "arrivalTime": "09:35", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 25 },
+  { "airline": "ANA", "flightNumber": "ANA105", "from": "大阪", "to": "東京", "departureTime": "14:00", "arrivalTime": "15:25", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 25 },
+  { "airline": "ANA", "flightNumber": "ANA106", "from": "大阪", "to": "東京", "departureTime": "19:30", "arrivalTime": "20:55", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 25 },
 
-  { "airline": "ANA", "flightNumber": "ANA107", "from": "東京", "to": "札幌", "departureTime": "07:45", "arrivalTime": "09:15", "basePrice": 22000 },
-  { "airline": "ANA", "flightNumber": "ANA108", "from": "札幌", "to": "東京", "departureTime": "10:00", "arrivalTime": "11:30", "basePrice": 22000 },
+  { "airline": "ANA", "flightNumber": "ANA107", "from": "東京", "to": "札幌", "departureTime": "07:45", "arrivalTime": "09:15", "basePrice": 22000, "flightTimeHours": 1, "flightTimeMinutes": 30 },
+  { "airline": "ANA", "flightNumber": "ANA108", "from": "札幌", "to": "東京", "departureTime": "10:00", "arrivalTime": "11:30", "basePrice": 22000, "flightTimeHours": 1, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA109", "from": "東京", "to": "福岡", "departureTime": "09:00", "arrivalTime": "11:00", "basePrice": 24000 },
-  { "airline": "ANA", "flightNumber": "ANA110", "from": "福岡", "to": "東京", "departureTime": "12:00", "arrivalTime": "14:00", "basePrice": 24000 },
+  { "airline": "ANA", "flightNumber": "ANA109", "from": "東京", "to": "福岡", "departureTime": "09:00", "arrivalTime": "11:00", "basePrice": 24000, "flightTimeHours": 2, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA110", "from": "福岡", "to": "東京", "departureTime": "12:00", "arrivalTime": "14:00", "basePrice": 24000, "flightTimeHours": 2, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA111", "from": "東京", "to": "那覇", "departureTime": "08:30", "arrivalTime": "11:10", "basePrice": 27000 },
-  { "airline": "ANA", "flightNumber": "ANA112", "from": "那覇", "to": "東京", "departureTime": "12:00", "arrivalTime": "14:40", "basePrice": 27000 },
+  { "airline": "ANA", "flightNumber": "ANA111", "from": "東京", "to": "那覇", "departureTime": "08:30", "arrivalTime": "11:10", "basePrice": 27000, "flightTimeHours": 2, "flightTimeMinutes": 40 },
+  { "airline": "ANA", "flightNumber": "ANA112", "from": "那覇", "to": "東京", "departureTime": "12:00", "arrivalTime": "14:40", "basePrice": 27000, "flightTimeHours": 2, "flightTimeMinutes": 40 },
 
-  { "airline": "ANA", "flightNumber": "ANA113", "from": "大阪", "to": "福岡", "departureTime": "10:00", "arrivalTime": "11:15", "basePrice": 21000 },
-  { "airline": "ANA", "flightNumber": "ANA114", "from": "福岡", "to": "大阪", "departureTime": "12:30", "arrivalTime": "13:45", "basePrice": 21000 },
+  { "airline": "ANA", "flightNumber": "ANA113", "from": "大阪", "to": "福岡", "departureTime": "10:00", "arrivalTime": "11:15", "basePrice": 21000, "flightTimeHours": 1, "flightTimeMinutes": 15 },
+  { "airline": "ANA", "flightNumber": "ANA114", "from": "福岡", "to": "大阪", "departureTime": "12:30", "arrivalTime": "13:45", "basePrice": 21000, "flightTimeHours": 1, "flightTimeMinutes": 15 },
 
-  { "airline": "ANA", "flightNumber": "ANA115", "from": "大阪", "to": "札幌", "departureTime": "09:15", "arrivalTime": "10:45", "basePrice": 23000 },
-  { "airline": "ANA", "flightNumber": "ANA116", "from": "札幌", "to": "大阪", "departureTime": "15:20", "arrivalTime": "16:50", "basePrice": 23000 },
+  { "airline": "ANA", "flightNumber": "ANA115", "from": "大阪", "to": "札幌", "departureTime": "09:15", "arrivalTime": "10:45", "basePrice": 23000, "flightTimeHours": 1, "flightTimeMinutes": 30 },
+  { "airline": "ANA", "flightNumber": "ANA116", "from": "札幌", "to": "大阪", "departureTime": "15:20", "arrivalTime": "16:50", "basePrice": 23000, "flightTimeHours": 1, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA117", "from": "東京", "to": "名古屋", "departureTime": "08:15", "arrivalTime": "09:00", "basePrice": 16000 },
-  { "airline": "ANA", "flightNumber": "ANA118", "from": "名古屋", "to": "東京", "departureTime": "10:00", "arrivalTime": "10:45", "basePrice": 16000 },
+  { "airline": "ANA", "flightNumber": "ANA117", "from": "東京", "to": "名古屋", "departureTime": "08:15", "arrivalTime": "09:00", "basePrice": 16000, "flightTimeHours": 0, "flightTimeMinutes": 45 },
+  { "airline": "ANA", "flightNumber": "ANA118", "from": "名古屋", "to": "東京", "departureTime": "10:00", "arrivalTime": "10:45", "basePrice": 16000, "flightTimeHours": 0, "flightTimeMinutes": 45 },
 
-  { "airline": "ANA", "flightNumber": "ANA119", "from": "大阪", "to": "那覇", "departureTime": "13:00", "arrivalTime": "15:20", "basePrice": 25000 },
-  { "airline": "ANA", "flightNumber": "ANA120", "from": "那覇", "to": "大阪", "departureTime": "16:00", "arrivalTime": "18:20", "basePrice": 25000 },
+  { "airline": "ANA", "flightNumber": "ANA119", "from": "大阪", "to": "那覇", "departureTime": "13:00", "arrivalTime": "15:20", "basePrice": 25000, "flightTimeHours": 2, "flightTimeMinutes": 20 },
+  { "airline": "ANA", "flightNumber": "ANA120", "from": "那覇", "to": "大阪", "departureTime": "16:00", "arrivalTime": "18:20", "basePrice": 25000, "flightTimeHours": 2, "flightTimeMinutes": 20 },
 
-  { "airline": "ANA", "flightNumber": "ANA121", "from": "東京", "to": "広島", "departureTime": "07:30", "arrivalTime": "08:50", "basePrice": 20000 },
-  { "airline": "ANA", "flightNumber": "ANA122", "from": "広島", "to": "東京", "departureTime": "09:30", "arrivalTime": "10:50", "basePrice": 20000 },
+  { "airline": "ANA", "flightNumber": "ANA121", "from": "東京", "to": "広島", "departureTime": "07:30", "arrivalTime": "08:50", "basePrice": 20000, "flightTimeHours": 1, "flightTimeMinutes": 20 },
+  { "airline": "ANA", "flightNumber": "ANA122", "from": "広島", "to": "東京", "departureTime": "09:30", "arrivalTime": "10:50", "basePrice": 20000, "flightTimeHours": 1, "flightTimeMinutes": 20 },
 
-  { "airline": "ANA", "flightNumber": "ANA123", "from": "東京", "to": "仙台", "departureTime": "08:40", "arrivalTime": "09:40", "basePrice": 18000 },
-  { "airline": "ANA", "flightNumber": "ANA124", "from": "仙台", "to": "東京", "departureTime": "10:10", "arrivalTime": "11:10", "basePrice": 18000 },
+  { "airline": "ANA", "flightNumber": "ANA123", "from": "東京", "to": "仙台", "departureTime": "08:40", "arrivalTime": "09:40", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA124", "from": "仙台", "to": "東京", "departureTime": "10:10", "arrivalTime": "11:10", "basePrice": 18000, "flightTimeHours": 1, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA125", "from": "東京", "to": "ロサンゼルス", "departureTime": "17:00", "arrivalTime": "10:00", "basePrice": 90000 },
-  { "airline": "ANA", "flightNumber": "ANA126", "from": "ロサンゼルス", "to": "東京", "departureTime": "12:00", "arrivalTime": "16:00", "basePrice": 90000 },
+  { "airline": "ANA", "flightNumber": "ANA125", "from": "東京", "to": "ロサンゼルス", "departureTime": "17:00", "arrivalTime": "10:00", "basePrice": 90000, "flightTimeHours": 17, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA126", "from": "ロサンゼルス", "to": "東京", "departureTime": "12:00", "arrivalTime": "16:00", "basePrice": 90000, "flightTimeHours": 4, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA127", "from": "東京", "to": "ニューヨーク", "departureTime": "11:00", "arrivalTime": "11:00", "basePrice": 95000 },
-  { "airline": "ANA", "flightNumber": "ANA128", "from": "ニューヨーク", "to": "東京", "departureTime": "13:00", "arrivalTime": "16:00", "basePrice": 95000 },
+  { "airline": "ANA", "flightNumber": "ANA127", "from": "東京", "to": "ニューヨーク", "departureTime": "11:00", "arrivalTime": "11:00", "basePrice": 95000, "flightTimeHours": 24, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA128", "from": "ニューヨーク", "to": "東京", "departureTime": "13:00", "arrivalTime": "16:00", "basePrice": 95000, "flightTimeHours": 3, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA129", "from": "東京", "to": "ロンドン", "departureTime": "13:30", "arrivalTime": "17:30", "basePrice": 92000 },
-  { "airline": "ANA", "flightNumber": "ANA130", "from": "ロンドン", "to": "東京", "departureTime": "20:00", "arrivalTime": "16:00", "basePrice": 92000 },
+  { "airline": "ANA", "flightNumber": "ANA129", "from": "東京", "to": "ロンドン", "departureTime": "13:30", "arrivalTime": "17:30", "basePrice": 92000, "flightTimeHours": 4, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA130", "from": "ロンドン", "to": "東京", "departureTime": "20:00", "arrivalTime": "16:00", "basePrice": 92000, "flightTimeHours": 20, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA131", "from": "東京", "to": "パリ", "departureTime": "10:30", "arrivalTime": "16:00", "basePrice": 91000 },
-  { "airline": "ANA", "flightNumber": "ANA132", "from": "パリ", "to": "東京", "departureTime": "19:00", "arrivalTime": "13:00", "basePrice": 91000 },
+  { "airline": "ANA", "flightNumber": "ANA131", "from": "東京", "to": "パリ", "departureTime": "10:30", "arrivalTime": "16:00", "basePrice": 91000, "flightTimeHours": 5, "flightTimeMinutes": 30 },
+  { "airline": "ANA", "flightNumber": "ANA132", "from": "パリ", "to": "東京", "departureTime": "19:00", "arrivalTime": "13:00", "basePrice": 91000, "flightTimeHours": 18, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA133", "from": "大阪", "to": "バンコク", "departureTime": "11:30", "arrivalTime": "15:30", "basePrice": 87000 },
-  { "airline": "ANA", "flightNumber": "ANA134", "from": "バンコク", "to": "大阪", "departureTime": "23:15", "arrivalTime": "05:45", "basePrice": 87000 },
+  { "airline": "ANA", "flightNumber": "ANA133", "from": "大阪", "to": "バンコク", "departureTime": "11:30", "arrivalTime": "15:30", "basePrice": 87000, "flightTimeHours": 4, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA134", "from": "バンコク", "to": "大阪", "departureTime": "23:15", "arrivalTime": "05:45", "basePrice": 87000, "flightTimeHours": 6, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA135", "from": "大阪", "to": "シンガポール", "departureTime": "14:00", "arrivalTime": "20:00", "basePrice": 88000 },
-  { "airline": "ANA", "flightNumber": "ANA136", "from": "シンガポール", "to": "大阪", "departureTime": "23:55", "arrivalTime": "06:25", "basePrice": 88000 },
+  { "airline": "ANA", "flightNumber": "ANA135", "from": "大阪", "to": "シンガポール", "departureTime": "14:00", "arrivalTime": "20:00", "basePrice": 88000, "flightTimeHours": 6, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA136", "from": "シンガポール", "to": "大阪", "departureTime": "23:55", "arrivalTime": "06:25", "basePrice": 88000, "flightTimeHours": 6, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA137", "from": "東京", "to": "シドニー", "departureTime": "21:00", "arrivalTime": "09:00", "basePrice": 93000 },
-  { "airline": "ANA", "flightNumber": "ANA138", "from": "シドニー", "to": "東京", "departureTime": "12:00", "arrivalTime": "20:00", "basePrice": 93000 },
+  { "airline": "ANA", "flightNumber": "ANA137", "from": "東京", "to": "シドニー", "departureTime": "21:00", "arrivalTime": "09:00", "basePrice": 93000, "flightTimeHours": 12, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA138", "from": "シドニー", "to": "東京", "departureTime": "12:00", "arrivalTime": "20:00", "basePrice": 93000, "flightTimeHours": 8, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA139", "from": "名古屋", "to": "札幌", "departureTime": "08:00", "arrivalTime": "09:30", "basePrice": 23000 },
-  { "airline": "ANA", "flightNumber": "ANA140", "from": "札幌", "to": "名古屋", "departureTime": "12:00", "arrivalTime": "13:30", "basePrice": 23000 },
+  { "airline": "ANA", "flightNumber": "ANA139", "from": "名古屋", "to": "札幌", "departureTime": "08:00", "arrivalTime": "09:30", "basePrice": 23000, "flightTimeHours": 1, "flightTimeMinutes": 30 },
+  { "airline": "ANA", "flightNumber": "ANA140", "from": "札幌", "to": "名古屋", "departureTime": "12:00", "arrivalTime": "13:30", "basePrice": 23000, "flightTimeHours": 1, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA141", "from": "那覇", "to": "札幌", "departureTime": "14:00", "arrivalTime": "17:00", "basePrice": 26000 },
-  { "airline": "ANA", "flightNumber": "ANA142", "from": "札幌", "to": "那覇", "departureTime": "18:00", "arrivalTime": "21:00", "basePrice": 26000 },
+  { "airline": "ANA", "flightNumber": "ANA141", "from": "那覇", "to": "札幌", "departureTime": "14:00", "arrivalTime": "17:00", "basePrice": 26000, "flightTimeHours": 3, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA142", "from": "札幌", "to": "那覇", "departureTime": "18:00", "arrivalTime": "21:00", "basePrice": 26000, "flightTimeHours": 3, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA143", "from": "広島", "to": "大阪", "departureTime": "07:50", "arrivalTime": "09:00", "basePrice": 19000 },
-  { "airline": "ANA", "flightNumber": "ANA144", "from": "大阪", "to": "広島", "departureTime": "16:10", "arrivalTime": "17:20", "basePrice": 19000 },
+  { "airline": "ANA", "flightNumber": "ANA143", "from": "広島", "to": "大阪", "departureTime": "07:50", "arrivalTime": "09:00", "basePrice": 19000, "flightTimeHours": 1, "flightTimeMinutes": 10 },
+  { "airline": "ANA", "flightNumber": "ANA144", "from": "大阪", "to": "広島", "departureTime": "16:10", "arrivalTime": "17:20", "basePrice": 19000, "flightTimeHours": 1, "flightTimeMinutes": 10 },
 
-  { "airline": "ANA", "flightNumber": "ANA145", "from": "仙台", "to": "札幌", "departureTime": "10:00", "arrivalTime": "11:10", "basePrice": 22000 },
-  { "airline": "ANA", "flightNumber": "ANA146", "from": "札幌", "to": "仙台", "departureTime": "13:00", "arrivalTime": "14:10", "basePrice": 22000 },
+  { "airline": "ANA", "flightNumber": "ANA145", "from": "仙台", "to": "札幌", "departureTime": "10:00", "arrivalTime": "11:10", "basePrice": 22000, "flightTimeHours": 1, "flightTimeMinutes": 10 },
+  { "airline": "ANA", "flightNumber": "ANA146", "from": "札幌", "to": "仙台", "departureTime": "13:00", "arrivalTime": "14:10", "basePrice": 22000, "flightTimeHours": 1, "flightTimeMinutes": 10 },
 
-  { "airline": "ANA", "flightNumber": "ANA147", "from": "東京", "to": "ソウル", "departureTime": "12:00", "arrivalTime": "14:30", "basePrice": 40000 },
-  { "airline": "ANA", "flightNumber": "ANA148", "from": "ソウル", "to": "東京", "departureTime": "16:00", "arrivalTime": "18:30", "basePrice": 40000 },
+  { "airline": "ANA", "flightNumber": "ANA147", "from": "東京", "to": "ソウル", "departureTime": "12:00", "arrivalTime": "14:30", "basePrice": 40000, "flightTimeHours": 2, "flightTimeMinutes": 30 },
+  { "airline": "ANA", "flightNumber": "ANA148", "from": "ソウル", "to": "東京", "departureTime": "16:00", "arrivalTime": "18:30", "basePrice": 40000, "flightTimeHours": 2, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA149", "from": "東京", "to": "台北", "departureTime": "09:30", "arrivalTime": "12:30", "basePrice": 42000 },
-  { "airline": "ANA", "flightNumber": "ANA150", "from": "台北", "to": "東京", "departureTime": "14:00", "arrivalTime": "17:00", "basePrice": 42000 },
+  { "airline": "ANA", "flightNumber": "ANA149", "from": "東京", "to": "台北", "departureTime": "09:30", "arrivalTime": "12:30", "basePrice": 42000, "flightTimeHours": 3, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA150", "from": "台北", "to": "東京", "departureTime": "14:00", "arrivalTime": "17:00", "basePrice": 42000, "flightTimeHours": 3, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA151", "from": "大阪", "to": "香港", "departureTime": "13:30", "arrivalTime": "17:00", "basePrice": 43000 },
-  { "airline": "ANA", "flightNumber": "ANA152", "from": "香港", "to": "大阪", "departureTime": "18:30", "arrivalTime": "22:00", "basePrice": 43000 },
+  { "airline": "ANA", "flightNumber": "ANA151", "from": "大阪", "to": "香港", "departureTime": "13:30", "arrivalTime": "17:00", "basePrice": 43000, "flightTimeHours": 3, "flightTimeMinutes": 30 },
+  { "airline": "ANA", "flightNumber": "ANA152", "from": "香港", "to": "大阪", "departureTime": "18:30", "arrivalTime": "22:00", "basePrice": 43000, "flightTimeHours": 3, "flightTimeMinutes": 30 },
 
-  { "airline": "ANA", "flightNumber": "ANA153", "from": "東京", "to": "バンコク", "departureTime": "10:00", "arrivalTime": "15:00", "basePrice": 88000 },
-  { "airline": "ANA", "flightNumber": "ANA154", "from": "バンコク", "to": "東京", "departureTime": "16:30", "arrivalTime": "22:00", "basePrice": 88000 }
+  { "airline": "ANA", "flightNumber": "ANA153", "from": "東京", "to": "バンコク", "departureTime": "10:00", "arrivalTime": "15:00", "basePrice": 88000, "flightTimeHours": 5, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA154", "from": "バンコク", "to": "東京", "departureTime": "16:30", "arrivalTime": "22:00", "basePrice": 88000, "flightTimeHours": 5, "flightTimeMinutes": 30 }
 ]

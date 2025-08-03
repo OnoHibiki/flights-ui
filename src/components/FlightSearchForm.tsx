@@ -13,6 +13,10 @@ type Flight = {
     departureTime: string;
     arrivalTime:string;
     flightNumber:string;
+
+    flightTimeHours: number;//飛行：時
+    flightTimeMinutes: number;//飛行：分
+
 }
 
 
@@ -70,6 +74,30 @@ const formatDate = (dateStr: string) =>
   new Date(dateStr).toLocaleDateString("ja-JP", { month: "long", day: "numeric" });
 
 
+/*　到着日計算関数
+const isNextDayArrival = (departureDate:string, departureTime: string, arrivalTime: string):
+boolean => {
+    const dep = new Date(`${departureDate}T${departureTime}`);
+    const arr = new Date(`${departureDate}T${arrivalTime}`);
+
+    return arr.getTime() <= dep.getTime();//これがTrueなら翌日到着扱い
+};
+*/
+
+//飛行時間計算関数
+const calculateFlightTime =  (departureDate:string, departureTime: string, arrivalTime: string):
+string => {
+    const dep = new Date(`${departureDate}T${departureTime}`);
+    const arr = new Date(`${departureDate}T${arrivalTime}`);
+    if (arr < dep){
+        arr.setDate(arr.getDate() + 1);
+    }
+
+    const flyTime = arr.getTime() - dep.getTime();
+    const flyHours = Math.floor(flyTime / 1000 / 60 / 60);
+    const flyMinutes = Math.floor((flyTime / 1000 / 60) % 60);
+    return `${flyHours}時間${flyMinutes}分`;
+};
 
 //メイン処理
 const FlightSearchForm : React.FC = () => {
@@ -128,9 +156,6 @@ const FlightSearchForm : React.FC = () => {
             departure: applyPriceMultiplier([pair.departure])[0],
             return: applyPriceMultiplier([pair.return])[0],
         }));
-
-
-
         //曜日倍率を乗算した最終価格を表示(往路と復路のそれぞれの値段が配列に)
         //const finalPrices = applyPriceMultiplier(flightsWithWeekday);
         setResults(finalPrices);
@@ -191,18 +216,26 @@ const FlightSearchForm : React.FC = () => {
                         <div className={styles.cardBox1}>
                             <strong>便名 : {r.departure.flightNumber}</strong> <br />
                             【往路】{r.departure.from}  → → → {r.departure.to} <br />
-                            <p>{`${formatDate(r.departure.day!)} ${r.departure.departureTime} 発 〜〜〜 ${r.departure.arrivalTime}着`}</p><br />
-                            往路：¥{r.departure.basePrice}<br />
+                            <p>
+                                {`${formatDate(r.departure.day!)} ${r.departure.departureTime} 発 〜〜〜 ${r.departure.arrivalTime}着`}<br />
+                                フライト時間：{calculateFlightTime(r.departure.day!, r.departure.departureTime,r.departure.arrivalTime)}
+                            </p>
+                            往路：¥{r.departure.basePrice.toLocaleString()}<br />
                         </div>
 
                         <div className={styles.cardBox2}>
                             <strong>便名 : {r.return.flightNumber}</strong> <br />
                             【復路】{r.return.from}  → → → {r.return.to}<br />
-                            <p>{`${formatDate(r.return.day!)} ${r.return.departureTime} 発 〜〜〜 ${r.return.arrivalTime}着`}</p><br />
-                            復路：¥{r.return.basePrice}<br />
+
+                            <p>
+                                {`${formatDate(r.return.day!)} ${r.return.departureTime} 発 〜〜〜 ${r.return.arrivalTime}着`}<br />
+                                フライト時間：{calculateFlightTime(r.return.day!, r.return.departureTime,r.return.arrivalTime)}
+                            </p>
+
+                            復路：¥{r.return.basePrice.toLocaleString()}<br />
                         </div>
 
-                        <p className={styles.totalPrice}>合計金額 : ¥{r.departure.basePrice + r.return.basePrice}</p>
+                        <p className={styles.totalPrice}>合計金額 : ¥{(r.departure.basePrice + r.return.basePrice).toLocaleString()}</p>
 
                     </li>
                     
