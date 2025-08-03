@@ -9,10 +9,22 @@ type Flight = {
     to:string;
     basePrice:number;
     day?: string; //jsonには含まないが、結果表示に必要（?はないかもしれないを表現)
+    airline:string; //航空会社
 };
 
-import flightsData from "@/data/flights.json"; //フライトデータの置き場所
-const flights: Flight[ ] = flightsData;
+
+//フライトデータの置き場所
+import anaData from "@/data/airlines/ana.json"; 
+import jalData from "@/data/airlines/jal.json"; 
+import peachData from "@/data/airlines/peach.json"; 
+import jetStarData from "@/data/airlines/jetstar.json"; 
+
+const flights: Flight[] = [
+    ...anaData.map(f => ({...f, airline:"ANA"})),
+    ...jalData.map(f => ({...f, airline:"JAL"})),
+    ...peachData.map(f => ({...f, airline:"Peach"})),
+    ...jetStarData.map(f => ({...f, airline:"Jetstar"})),
+];
 
 
 //dayから曜日を取得する関数
@@ -138,7 +150,7 @@ const FlightSearchForm : React.FC = () => {
                     {results.map((f, i) => (
                     <li key={i} className={styles.resultCard}>
                         <strong>{f.day === departureDay ? "【往路】" : "【復路】"}</strong><br />
-                        {`${f.from} → ${f.to}（${new Date(f.day!).toLocaleDateString("ja-JP", {
+                        {`航空会社 : ${f.airline} 提供 ${f.from} → ${f.to}（${new Date(f.day!).toLocaleDateString("ja-JP", {
                         month: "long",
                         day: "numeric",
                         })}発） ¥${f.basePrice}`}
