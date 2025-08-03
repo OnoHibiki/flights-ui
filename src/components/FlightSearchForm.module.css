@@ -73,4 +73,30 @@
     white-space: nowrap;
     background-color: white;
     border: #333 2px solid;
+    padding: 0.1rem 1rem;
+    margin :1rem;
+}
+
+.cardBox1 {
+    border: #333 1px dashed;
+    padding: 0.2rem;
+    
+}
+
+.cardBox2 {
+    border: #333 1px dashed;
+    padding: 0.2rem;
+}
+
+.totalPrice{
+    text-align: right;
+    font-weight: bold;
+    padding:0.2rem;
+}
+
+.airlineCompanyName {
+    text-align: center;
+    padding: 0;
+    font-size: large;
+    font-weight: bolder;
 }

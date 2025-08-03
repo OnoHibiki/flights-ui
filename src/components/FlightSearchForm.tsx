@@ -10,7 +10,17 @@ type Flight = {
     basePrice:number;
     day?: string; //jsonには含まないが、結果表示に必要（?はないかもしれないを表現)
     airline:string; //航空会社
-};
+    departureTime: string;
+    arrivalTime:string;
+    flightNumber:string;
+}
+
+
+type FlightResult = {
+    airline:string;
+    departure:Flight;
+    return: Flight;
+}
 
 
 //フライトデータの置き場所
@@ -55,14 +65,20 @@ const applyPriceMultiplier = (flights: Flight[]) => {
     });
 };
 
+//日付変換を関数化
+const formatDate = (dateStr: string) =>
+  new Date(dateStr).toLocaleDateString("ja-JP", { month: "long", day: "numeric" });
 
+
+
+//メイン処理
 const FlightSearchForm : React.FC = () => {
 
     const[from, setFrom] = useState("");
     const[to, setTo] = useState("");
     const[departureDay, setDepartureDay] = useState("");
     const[returnDay,setReturnDay] = useState("");
-    const [results, setResults] = useState<Flight[]>([]);
+    const [results, setResults] = useState<FlightResult[]>([]);
 
     const uniqueFroms = Array.from(new Set(flights.map(f => f.from)));
     const uniqueTos = Array.from(new Set(flights.map(f => f.to)));
@@ -88,16 +104,35 @@ const FlightSearchForm : React.FC = () => {
             flight.from === to &&
             flight.to === from 
         );
-        
 
-        const flightsWithWeekday = [
-            ...departureFlight.map(f => ({ ...f, day: departureDay })),
-            ...returnFlight.map(f => ({ ...f, day: returnDay}))
-        ];
+        // 往路、復路でワンセット
+        const resultsCombined: FlightResult[] = [];
+        // 航空会社ごとに
+        const airlineNames = ["ANA","JAL","Peach","Jetstar"];
+
+        for (const airline of airlineNames) {
+            const dep = departureFlight.find(f => f.airline === airline);
+            const ret = returnFlight.find(f => f.airline === airline);
+
+            if (dep && ret) {
+                resultsCombined.push({
+                    airline,
+                    departure: {...dep, day: departureDay},
+                    return: {...ret, day: returnDay}
+                });
+            }
+        }
+
+        const finalPrices = resultsCombined.map(pair => ({
+            ...pair,
+            departure: applyPriceMultiplier([pair.departure])[0],
+            return: applyPriceMultiplier([pair.return])[0],
+        }));
+
 
 
         //曜日倍率を乗算した最終価格を表示(往路と復路のそれぞれの値段が配列に)
-        const finalPrices = applyPriceMultiplier(flightsWithWeekday);
+        //const finalPrices = applyPriceMultiplier(flightsWithWeekday);
         setResults(finalPrices);
     };
 
@@ -147,14 +182,30 @@ const FlightSearchForm : React.FC = () => {
 
             <div className={styles.resultArea}>
                 <ul className={styles.resultList}>
-                    {results.map((f, i) => (
+                    {results.map((r, i) => (
+
                     <li key={i} className={styles.resultCard}>
-                        <strong>{f.day === departureDay ? "【往路】" : "【復路】"}</strong><br />
-                        {`航空会社 : ${f.airline} 提供 ${f.from} → ${f.to}（${new Date(f.day!).toLocaleDateString("ja-JP", {
-                        month: "long",
-                        day: "numeric",
-                        })}発） ¥${f.basePrice}`}
+
+                        <h2 className={styles.airlineCompanyName}>{`航空会社 :  ${r.airline} `}</h2>
+
+                        <div className={styles.cardBox1}>
+                            <strong>便名 : {r.departure.flightNumber}</strong> <br />
+                            【往路】{r.departure.from}  → → → {r.departure.to} <br />
+                            <p>{`${formatDate(r.departure.day!)} ${r.departure.departureTime} 発 〜〜〜 ${r.departure.arrivalTime}着`}</p><br />
+                            往路：¥{r.departure.basePrice}<br />
+                        </div>
+
+                        <div className={styles.cardBox2}>
+                            <strong>便名 : {r.return.flightNumber}</strong> <br />
+                            【復路】{r.return.from}  → → → {r.return.to}<br />
+                            <p>{`${formatDate(r.return.day!)} ${r.return.departureTime} 発 〜〜〜 ${r.return.arrivalTime}着`}</p><br />
+                            復路：¥{r.return.basePrice}<br />
+                        </div>
+
+                        <p className={styles.totalPrice}>合計金額 : ¥{r.departure.basePrice + r.return.basePrice}</p>
+
                     </li>
+                    
                     ))}
                 </ul>
             </div>
