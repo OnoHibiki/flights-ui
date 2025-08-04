@@ -84,6 +84,7 @@ const FlightSearchForm : React.FC = () => {
     const[returnDay,setReturnDay] = useState("");
     const [results, setResults] = useState<FlightResult[]>([]);
     const [searched, setSearched] = useState(false);
+    const [sortOption,setSortOption] = useState("priceAsc");
 
     const uniqueFroms = Array.from(new Set(flights.map(f => f.from)));
     const uniqueTos = Array.from(new Set(flights.map(f => f.to)));
@@ -135,6 +136,13 @@ const FlightSearchForm : React.FC = () => {
         }));
 
         setResults(finalPrices);
+
+        const sortedResults = [...finalPrices].sort((a,b) =>{
+            const priceA = a.departure.basePrice + a.return.basePrice;
+            const priceB = b.departure.basePrice + b.return.basePrice;
+            return sortOption === "priceAsc" ? priceA - priceB : priceB - priceA;
+        });
+
         setSearched(true);
     };
 
@@ -143,7 +151,7 @@ const FlightSearchForm : React.FC = () => {
     return(
         <div>
             <form onSubmit={handleSubmit} className={styles.container}>
-
+                
                 {/* 出発地 */}
                 <div className={styles.field}>
                     <label htmlFor="from">出発地</label>
