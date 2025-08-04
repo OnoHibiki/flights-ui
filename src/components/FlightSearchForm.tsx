@@ -74,30 +74,6 @@ const formatDate = (dateStr: string) =>
   new Date(dateStr).toLocaleDateString("ja-JP", { month: "long", day: "numeric" });
 
 
-/*　到着日計算関数
-const isNextDayArrival = (departureDate:string, departureTime: string, arrivalTime: string):
-boolean => {
-    const dep = new Date(`${departureDate}T${departureTime}`);
-    const arr = new Date(`${departureDate}T${arrivalTime}`);
-
-    return arr.getTime() <= dep.getTime();//これがTrueなら翌日到着扱い
-};
-*/
-
-//飛行時間計算関数
-const calculateFlightTime =  (departureDate:string, departureTime: string, arrivalTime: string):
-string => {
-    const dep = new Date(`${departureDate}T${departureTime}`);
-    const arr = new Date(`${departureDate}T${arrivalTime}`);
-    if (arr < dep){
-        arr.setDate(arr.getDate() + 1);
-    }
-
-    const flyTime = arr.getTime() - dep.getTime();
-    const flyHours = Math.floor(flyTime / 1000 / 60 / 60);
-    const flyMinutes = Math.floor((flyTime / 1000 / 60) % 60);
-    return `${flyHours}時間${flyMinutes}分`;
-};
 
 //メイン処理
 const FlightSearchForm : React.FC = () => {
@@ -216,10 +192,12 @@ const FlightSearchForm : React.FC = () => {
                         <div className={styles.cardBox1}>
                             <strong>便名 : {r.departure.flightNumber}</strong> <br />
                             【往路】{r.departure.from}  → → → {r.departure.to} <br />
+
                             <p>
                                 {`${formatDate(r.departure.day!)} ${r.departure.departureTime} 発 〜〜〜 ${r.departure.arrivalTime}着`}<br />
-                                フライト時間：{calculateFlightTime(r.departure.day!, r.departure.departureTime,r.departure.arrivalTime)}
+                                フライト時間：{r.departure.flightTimeHours}時間{r.departure.flightTimeMinutes}分
                             </p>
+
                             往路：¥{r.departure.basePrice.toLocaleString()}<br />
                         </div>
 
@@ -229,7 +207,7 @@ const FlightSearchForm : React.FC = () => {
 
                             <p>
                                 {`${formatDate(r.return.day!)} ${r.return.departureTime} 発 〜〜〜 ${r.return.arrivalTime}着`}<br />
-                                フライト時間：{calculateFlightTime(r.return.day!, r.return.departureTime,r.return.arrivalTime)}
+                                フライト時間：{r.return.flightTimeHours}時間{r.return.flightTimeMinutes}分
                             </p>
 
                             復路：¥{r.return.basePrice.toLocaleString()}<br />
