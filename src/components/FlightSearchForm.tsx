@@ -182,43 +182,49 @@ const FlightSearchForm : React.FC = () => {
             </form>
 
             <div className={styles.resultArea}>
-                <ul className={styles.resultList}>
-                    {results.map((r, i) => (
 
-                    <li key={i} className={styles.resultCard}>
+                {results.length === 0 ? (
+                    <p className={styles.nothingResults}>条件に一致するフライトが見つかりませんでした。</p>
+                ):(
 
-                        <h2 className={styles.airlineCompanyName}>{`航空会社 :  ${r.airline} `}</h2>
+                    <ul className={styles.resultList}>
+                        {results.map((r, i) => (
 
-                        <div className={styles.cardBox1}>
-                            <strong>便名 : {r.departure.flightNumber}</strong> <br />
-                            【往路】{r.departure.from}  → → → {r.departure.to} <br />
+                        <li key={i} className={styles.resultCard}>
 
-                            <p>
-                                {`${formatDate(r.departure.day!)} ${r.departure.departureTime} 発 〜〜〜 ${r.departure.arrivalTime}着`}<br />
-                                フライト時間：{r.departure.flightTimeHours}時間{r.departure.flightTimeMinutes}分
-                            </p>
+                            <h2 className={styles.airlineCompanyName}>{`航空会社 :  ${r.airline} `}</h2>
 
-                            往路：¥{r.departure.basePrice.toLocaleString()}<br />
-                        </div>
+                            <div className={styles.cardBox1}>
+                                <strong>便名 : {r.departure.flightNumber}</strong> <br />
+                                【往路】{r.departure.from}  → → → {r.departure.to} <br />
 
-                        <div className={styles.cardBox2}>
-                            <strong>便名 : {r.return.flightNumber}</strong> <br />
-                            【復路】{r.return.from}  → → → {r.return.to}<br />
+                                <p>
+                                    {`${formatDate(r.departure.day!)} ${r.departure.departureTime} 発 〜〜〜 ${r.departure.arrivalTime}着`}<br />
+                                    フライト時間：{r.departure.flightTimeHours}時間{r.departure.flightTimeMinutes}分
+                                </p>
 
-                            <p>
-                                {`${formatDate(r.return.day!)} ${r.return.departureTime} 発 〜〜〜 ${r.return.arrivalTime}着`}<br />
-                                フライト時間：{r.return.flightTimeHours}時間{r.return.flightTimeMinutes}分
-                            </p>
+                                往路：¥{r.departure.basePrice.toLocaleString()}<br />
+                            </div>
 
-                            復路：¥{r.return.basePrice.toLocaleString()}<br />
-                        </div>
+                            <div className={styles.cardBox2}>
+                                <strong>便名 : {r.return.flightNumber}</strong> <br />
+                                【復路】{r.return.from}  → → → {r.return.to}<br />
 
-                        <p className={styles.totalPrice}>合計金額 : ¥{(r.departure.basePrice + r.return.basePrice).toLocaleString()}</p>
+                                <p>
+                                    {`${formatDate(r.return.day!)} ${r.return.departureTime} 発 〜〜〜 ${r.return.arrivalTime}着`}<br />
+                                    フライト時間：{r.return.flightTimeHours}時間{r.return.flightTimeMinutes}分
+                                </p>
 
-                    </li>
-                    
-                    ))}
-                </ul>
+                                復路：¥{r.return.basePrice.toLocaleString()}<br />
+                            </div>
+
+                            <p className={styles.totalPrice}>合計金額 : ¥{(r.departure.basePrice + r.return.basePrice).toLocaleString()}</p>
+
+                        </li>
+                        
+                        ))}
+                    </ul>
+                )}
             </div>
         </div>
         
