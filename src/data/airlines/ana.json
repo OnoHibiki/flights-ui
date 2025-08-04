@@ -36,7 +36,7 @@
   { "airline": "ANA", "flightNumber": "ANA125", "from": "東京", "to": "ロサンゼルス", "departureTime": "17:00", "arrivalTime": "10:00", "basePrice": 90000, "flightTimeHours": 17, "flightTimeMinutes": 0 },
   { "airline": "ANA", "flightNumber": "ANA126", "from": "ロサンゼルス", "to": "東京", "departureTime": "12:00", "arrivalTime": "16:00", "basePrice": 90000, "flightTimeHours": 4, "flightTimeMinutes": 0 },
 
-  { "airline": "ANA", "flightNumber": "ANA127", "from": "東京", "to": "ニューヨーク", "departureTime": "11:00", "arrivalTime": "11:00", "basePrice": 95000, "flightTimeHours": 23, "flightTimeMinutes": 0 },
+  { "airline": "ANA", "flightNumber": "ANA127", "from": "東京", "to": "ニューヨーク", "departureTime": "11:00", "arrivalTime": "11:00", "basePrice": 95000, "flightTimeHours": 24, "flightTimeMinutes": 0 },
   { "airline": "ANA", "flightNumber": "ANA128", "from": "ニューヨーク", "to": "東京", "departureTime": "13:00", "arrivalTime": "16:00", "basePrice": 95000, "flightTimeHours": 3, "flightTimeMinutes": 0 },
 
   { "airline": "ANA", "flightNumber": "ANA129", "from": "東京", "to": "ロンドン", "departureTime": "13:30", "arrivalTime": "17:30", "basePrice": 92000, "flightTimeHours": 4, "flightTimeMinutes": 0 },
