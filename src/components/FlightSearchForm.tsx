@@ -83,6 +83,7 @@ const FlightSearchForm : React.FC = () => {
     const[departureDay, setDepartureDay] = useState("");
     const[returnDay,setReturnDay] = useState("");
     const [results, setResults] = useState<FlightResult[]>([]);
+    const [searched, setSearched] = useState(false);
 
     const uniqueFroms = Array.from(new Set(flights.map(f => f.from)));
     const uniqueTos = Array.from(new Set(flights.map(f => f.to)));
@@ -132,9 +133,9 @@ const FlightSearchForm : React.FC = () => {
             departure: applyPriceMultiplier([pair.departure])[0],
             return: applyPriceMultiplier([pair.return])[0],
         }));
-        //曜日倍率を乗算した最終価格を表示(往路と復路のそれぞれの値段が配列に)
-        //const finalPrices = applyPriceMultiplier(flightsWithWeekday);
+
         setResults(finalPrices);
+        setSearched(true);
     };
 
 
@@ -183,7 +184,7 @@ const FlightSearchForm : React.FC = () => {
 
             <div className={styles.resultArea}>
 
-                {results.length === 0 ? (
+                {searched && results.length === 0 ? (
                     <p className={styles.nothingResults}>条件に一致するフライトが見つかりませんでした。</p>
                 ):(
 
