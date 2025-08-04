@@ -100,3 +100,12 @@
     font-size: large;
     font-weight: bolder;
 }
+
+
+
+.nothingResults {
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+    color: rgb(218, 0, 0);
+}
