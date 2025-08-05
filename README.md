@@ -1,36 +1,16 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+旅行が好きで好きでたまらないので、まずはこれを作ってみました！
 
-## Getting Started
+航空券検索UI（往復対応）  
+Next.js × TypeScript を使って構築した入門向けポートフォリオプロジェクトです。
 
-First, run the development server:
+## 🎯 機能一覧
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- ✅ 出発地／到着地の選択
+- ✅ 往路・復路の日付入力（復路は往路より後の日付のみ選択可能）
+- ✅ 各航空会社（ANA, JAL, Peach, Jetstar）からのデータ統合（jsonで管理)
+- ✅ 曜日に応じた価格倍率（例：金曜は高め、日曜は安め）
+- ✅ 検索結果をカード形式で表示
+- ✅ フライト時間（hour/min）を表示
+- ✅ 合計金額表示
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+  https://flights-ui-six.vercel.app/
