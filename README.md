@@ -2,6 +2,7 @@
 
 航空券検索UI（往復対応）  
 Next.js × TypeScript を使って構築した入門向けポートフォリオプロジェクトです。
+CSS modules
 
 ## 🎯 機能一覧
 
